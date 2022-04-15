@@ -1,0 +1,26 @@
+{
+  "name": "hardhat",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "npx hardhat test --parallel --network hardhat",
+    "compile": "npx hardhat compile",
+    "node": "npx hardhat node",
+    "deploy-local": "npx hardhat run scripts/deploy.js --network hardhat",
+    "deploy-rinkeby": "export $(cat ./config/deploy.env | xargs) && npx hardhat run scripts/deploy.js --network rinkeby"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@openzeppelin/contracts": "^4.5.0",
+    "hardhat": "^2.9.1"
+  },
+  "devDependencies": {
+    "@nomiclabs/hardhat-ethers": "^2.0.5",
+    "@nomiclabs/hardhat-waffle": "^2.0.3",
+    "chai": "^4.3.6",
+    "ethereum-waffle": "^3.4.0",
+    "ethers": "^5.5.4"
+  }
+}
